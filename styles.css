@@ -1,0 +1,234 @@
+:root {
+  --bg: #070707;
+  --bg-soft: #121212;
+  --orange: #ff6a2b;
+  --orange-bright: #ff7f45;
+  --orange-deep: #e85516;
+  --text: #fff4ec;
+  --muted: rgba(255, 244, 236, 0.68);
+  --line: rgba(255, 106, 43, 0.55);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --radius: 16px;
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-body: "Manrope", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 106, 43, 0.28), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 30%, rgba(255, 90, 20, 0.12), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 0% 70%, rgba(255, 120, 50, 0.1), transparent 45%),
+    linear-gradient(180deg, #101010 0%, #070707 45%, #050505 100%);
+}
+
+.atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, 420px);
+  margin: 0 auto;
+  padding: 2.5rem 0 2rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.brand {
+  text-align: center;
+  animation: rise 0.7s ease both;
+}
+
+.brand__mark {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(5.5rem, 22vw, 7.5rem);
+  line-height: 0.85;
+  letter-spacing: 0.04em;
+  color: var(--orange);
+  text-shadow: 0 0 40px rgba(255, 106, 43, 0.35);
+}
+
+.brand__name {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 9vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--orange-bright);
+}
+
+.brand__tag {
+  margin: 0.85rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.95rem 1.1rem;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.95), rgba(10, 10, 10, 0.95));
+  color: var(--orange);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: rise 0.7s ease both;
+}
+
+.btn:nth-child(1) {
+  animation-delay: 0.08s;
+}
+.btn:nth-child(2) {
+  animation-delay: 0.14s;
+}
+.btn:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.btn:nth-child(4) {
+  animation-delay: 0.26s;
+}
+.btn:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.btn:nth-child(6) {
+  animation-delay: 0.38s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+  background: linear-gradient(180deg, rgba(36, 22, 14, 0.98), rgba(14, 10, 8, 0.98));
+  box-shadow: 0 16px 36px rgba(255, 106, 43, 0.18);
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn__icon {
+  flex: 0 0 auto;
+  width: 1.55rem;
+  height: 1.55rem;
+  display: grid;
+  place-items: center;
+}
+
+.btn__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.btn__text strong {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+.btn__text small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.btn--whatsapp {
+  border-color: rgba(37, 211, 102, 0.35);
+}
+
+.btn--whatsapp:hover,
+.btn--whatsapp:focus-visible {
+  border-color: #25d366;
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.14);
+}
+
+.footer {
+  text-align: center;
+  animation: rise 0.7s ease both;
+  animation-delay: 0.45s;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 244, 236, 0.35);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
