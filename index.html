@@ -6,16 +6,15 @@
     <title>RS Auto Peças — Contatos</title>
     <meta
       name="description"
-      content="RS Auto Peças — Peças, pneus, alinhamento e balanceamento. WhatsApp, telefone, Instagram e localização."
+      content="RS Auto Peças — Pneus, peças, alinhamento, balanceamento e troca de óleo."
     />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#000000" />
 
-    <!-- Preview ao compartilhar o link (WhatsApp, Instagram, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="RS Auto Peças" />
     <meta
       property="og:description"
-      content="Peças · Pneus · Alinhamento e Balanceamento"
+      content="Pneus, peças, alinhamento, balanceamento e troca de óleo"
     />
     <meta property="og:image" content="https://rs-iota-jet.vercel.app/og-image-v2.png" />
     <meta property="og:image:width" content="1200" />
@@ -25,7 +24,7 @@
     <meta name="twitter:title" content="RS Auto Peças" />
     <meta
       name="twitter:description"
-      content="Peças · Pneus · Alinhamento e Balanceamento"
+      content="Pneus, peças, alinhamento, balanceamento e troca de óleo"
     />
     <meta name="twitter:image" content="https://rs-iota-jet.vercel.app/og-image-v2.png" />
     <link rel="icon" href="logo.png" type="image/png" />
@@ -33,26 +32,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="atmosphere" aria-hidden="true"></div>
-
     <main class="page">
       <header class="brand">
-        <p class="brand__mark">RS</p>
-        <h1 class="brand__name">AUTO PEÇAS</h1>
-        <p class="brand__tag">Peças · Pneus · Alinhamento e Balanceamento</p>
+        <img class="brand__logo" src="logo.png" alt="RS Auto Peças" width="1200" height="1200" />
+        <p class="brand__services">
+          Pneus - Peças -<br />
+          Alinhamento e Balanceamento
+        </p>
+        <p class="brand__highlight">Troca de óleo</p>
       </header>
 
       <section class="actions" aria-label="Contatos e links">
         <article class="contact">
           <div class="contact__info">
             <strong>Thiago</strong>
-            <span>(35) 99771-1307</span>
+            <a class="contact__phone" href="tel:+5535997711307">(35) 99771-1307</a>
           </div>
           <div class="contact__actions">
             <a
@@ -82,7 +82,7 @@
         <article class="contact">
           <div class="contact__info">
             <strong>Rafa</strong>
-            <span>(35) 99915-5657</span>
+            <a class="contact__phone" href="tel:+5535999155657">(35) 99915-5657</a>
           </div>
           <div class="contact__actions">
             <a
@@ -122,9 +122,7 @@
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
             </svg>
           </span>
-          <span class="btn__text">
-            <strong>Instagram</strong>
-          </span>
+          <strong>Instagram</strong>
         </a>
 
         <a
@@ -139,15 +137,9 @@
               <circle cx="12" cy="10" r="3" />
             </svg>
           </span>
-          <span class="btn__text">
-            <strong>Localização</strong>
-          </span>
+          <strong>Localização</strong>
         </a>
       </section>
-
-      <footer class="footer">
-        <p>RS Auto Peças</p>
-      </footer>
     </main>
   </body>
 </html>
