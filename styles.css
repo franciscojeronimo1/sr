@@ -70,23 +70,25 @@ body {
   animation: rise 0.7s ease both;
 }
 
-.brand__mark {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(5.5rem, 22vw, 7.5rem);
-  line-height: 0.85;
-  letter-spacing: 0.04em;
-  color: var(--orange);
-  text-shadow: 0 0 40px rgba(255, 106, 43, 0.35);
+.brand__logo {
+  display: block;
+  width: min(100%, 340px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
 }
 
-.brand__name {
-  margin: 0.15rem 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 9vw, 3rem);
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--orange-bright);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .brand__tag {
